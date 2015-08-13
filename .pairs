@@ -1,0 +1,11 @@
+pairs:
+  jf: Jared Friese; jfriese
+  dn: Dan Neumann; dneumann
+  nm: Nick Mahoney; nmahoney
+  pk: Pouya Karimi; pkarimi
+  ya: Yusef Asjana; yasjana
+email:
+  prefix: pair
+  domain: pivotal.io
+
+global: true
