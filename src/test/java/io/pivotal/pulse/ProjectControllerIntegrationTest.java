@@ -30,8 +30,8 @@ public class ProjectControllerIntegrationTest {
 
     @Test
     public void create_whenCallWithValidParameter_createsNewProject() throws Exception {
-        mockMvc.perform(post("/project"))
-            .andExpect(status().isOk())
+        mockMvc.perform(post("/projects"))
+            .andExpect(status().isCreated())
             .andReturn();
 
 //        assertThat();
