@@ -10,18 +10,18 @@ import static org.mockito.Mockito.verify;
 public class ProjectCreatorTest {
 
     private ProjectCreator subject;
-    private ProjectPersistance projectPersistance;
+    private ProjectDAO projectDAO;
 
     @Before
     public void setUp() {
-        projectPersistance = mock(ProjectPersistance.class);
-        subject = new ProjectCreator(projectPersistance);
+        projectDAO = mock(ProjectDAO.class);
+        subject = new ProjectCreator(projectDAO);
 
     }
     @Test
     public void create_persistsProject() throws Exception {
         subject.create("Project A", "ABC");
 
-        verify(projectPersistance).save(new Project("Project A", "ABC"));
+        verify(projectDAO).save(new Project("Project A", "ABC"));
     }
 }

@@ -5,15 +5,15 @@ import org.springframework.stereotype.Component;
 @Component
 public class ProjectCreator {
 
-    private ProjectPersistance projectPersistance;
+    private ProjectDAO projectDAO;
 
-    public ProjectCreator(ProjectPersistance projectPersistance) {
+    public ProjectCreator(ProjectDAO projectDAO) {
 
-        this.projectPersistance = projectPersistance;
+        this.projectDAO = projectDAO;
     }
 
     public void create(String name, String code) {
         Project project = new Project(name, code);
-        projectPersistance.save(project);
+        projectDAO.save(project);
     }
 }
