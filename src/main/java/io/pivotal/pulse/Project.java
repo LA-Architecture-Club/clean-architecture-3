@@ -1,7 +1,8 @@
 package io.pivotal.pulse;
 
 public class Project {
-
+    
+    private Integer id;
     private String name;
     private String code;
 
@@ -21,5 +22,17 @@ public class Project {
         if (name != null ? !name.equals(project.name) : project.name != null) return false;
 
         return true;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 }
