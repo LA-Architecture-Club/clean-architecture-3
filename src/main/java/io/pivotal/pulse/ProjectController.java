@@ -20,7 +20,7 @@ public class ProjectController {
 
     @RequestMapping(value = "/projects", method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.CREATED)
-    public void create(@RequestBody ProjectDTO projectDto) {
+    public void create(@RequestBody ProjectDTO projectDto) throws Exception {
         projectCreator.create(projectDto.getName(), projectDto.getCode());
     }
 }

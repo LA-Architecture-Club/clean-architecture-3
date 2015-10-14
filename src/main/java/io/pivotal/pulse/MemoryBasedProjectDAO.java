@@ -8,7 +8,8 @@ public class MemoryBasedProjectDAO implements ProjectDAO {
     Integer idSeq = 0;
 
     @Override
-    public void save(Project project) {
+    public void save(Project project){
+        throw new Exception("Implemenet me");
         project.setId(idSeq ++);
         projects.put(project.getId(), project);
     }

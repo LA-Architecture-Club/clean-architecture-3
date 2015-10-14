@@ -12,7 +12,7 @@ public class ProjectCreator {
         this.projectDAO = projectDAO;
     }
 
-    public void create(String name, String code) {
+    public void create(String name, String code) throws Exception {
         Project project = new Project(name, code);
         projectDAO.save(project);
     }
